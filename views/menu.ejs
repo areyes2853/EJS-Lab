@@ -9,5 +9,13 @@
     <!-- adding a nav -->
     <%- include('./partials/nav') %>
   <h1>Full Menu</h1>
+  <ul>
+    <% restaurant.menu.forEach((element,index) => { %>
+    <li><a href="/<%= index %>"><ol><strong>Name:</strong><%= element.name %></a></ol>
+      <ol><strong>Price:</strong><%=element.price %></ol>
+      <ol><strong>Rating:</strong><%=element.rating %></ol>
+      <ol><strong>Details:</strong><%=element.details %></ol></li>
+      <% }) %>
+  </ul>
 </body>
 </html>

@@ -10,11 +10,7 @@
 
   <h1>Welcome to <%= restaurant.name %></h1>
   <p><%= restaurant.address %>,<%= restaurant.phone %></p>
-  <ul>
-  <% restaurant.menu.forEach(element => { %>
-  <li><%= element.name %>: <%=element.price %> </li>
-    <% }) %>
-</ul>
+ 
 
 </body>
 </html>

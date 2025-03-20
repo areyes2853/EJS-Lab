@@ -57,4 +57,25 @@ const RESTAURANT = {
 res.render('home.ejs', { restaurant: RESTAURANT });
     
   });
-  
+
+  app.get('/menu', (req, res) => {
+    res.render('menu.ejs', { restaurant: RESTAURANT });
+        
+      });
+      app.get('/menu/mains', (req, res) => {
+        res.render('mains.ejs', { restaurant: RESTAURANT });
+            
+          });
+          app.get('/menu/desserts', (req, res) => {
+            res.render('desserts.ejs', { restaurant: RESTAURANT });
+                
+              });
+              app.get('/menu/sides', (req, res) => {
+                res.render('sides.ejs', { restaurant: RESTAURANT });
+                    
+                  });
+                  app.get('/:category', (req, res) => {
+                    const index = req.params.category
+                    res.render('category.ejs', { item: RESTAURANT.menu[index]});
+                        
+                      });
